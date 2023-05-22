@@ -24,8 +24,11 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+        binding.btnregister.setOnClickListener{
 
-
+           var intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
