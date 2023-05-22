@@ -29,6 +29,10 @@ class MainActivity : AppCompatActivity() {
            var intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
         }
+        binding.btnscrbrd.setOnClickListener {
+            var intent = Intent(this,ScoreBoardActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

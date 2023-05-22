@@ -1,5 +1,6 @@
 package com.project.cardmatchgame2.activitys
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,12 @@ class UserRvAdapter(private val userList: List<User>) : RecyclerView.Adapter<Use
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val currentUser = userList[position]
         holder.bind(currentUser)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, GameScreenActivity::class.java)
+            intent.putExtra("userId", currentUser.userId)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity() {
         val usersref = FirebaseDatabase.getInstance().getReference("Users")
         binding.btnkytol.setOnClickListener {
             val ad = binding.edtadsoyad.text.toString().trim()
-            val user = User(ad)
+            val user = User(ad,"userId")
             usersref.push().setValue(user).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Kayıt başarılı!", Toast.LENGTH_LONG).show()

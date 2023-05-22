@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.database.FirebaseDatabase
 import com.project.cardmatchgame2.R
 import com.project.cardmatchgame2.databinding.ActivityGameScreenBinding
 
@@ -23,6 +24,8 @@ class GameScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGameScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val userId = intent.getStringExtra("userId")
 
         scoreTextView = binding.scoretxt
         val images = mutableListOf(R.drawable.caticon,R.drawable.foxicon,R.drawable.lionicon)
@@ -84,8 +87,17 @@ class GameScreenActivity : AppCompatActivity() {
     }
 
     private fun showScore() {
-        scoreTextView.text = "Skor:  $score"
-        Toast.makeText(this, "Oyun bitti. Skor: $score", Toast.LENGTH_SHORT).show()
+
+        val userId = intent.getStringExtra("userId")
+        // Skoru Firebase Realtime Database'e kaydet
+        if(userId != null) {
+            val scoresRef = FirebaseDatabase.getInstance().getReference("Scores")
+            scoresRef.child(userId).setValue(score)
+            scoreTextView.text = "Skor:  $score"
+            Toast.makeText(this, "Oyun bitti. Skor: $score", Toast.LENGTH_SHORT).show()
+        } else{
+
+        }
 
     }
 
