@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         // ViewBinding özelliğini kullanarak intent eklentisiyle Whoplays ekranına geçmemizi sağlayan kodlar
         binding.btntek.setOnClickListener {
 
-            var intent = Intent(this, SinglePlayerOptionsActivity::class.java)
+            var intent = Intent(this, PlayersActivity::class.java)
 
             startActivity(intent)
         }

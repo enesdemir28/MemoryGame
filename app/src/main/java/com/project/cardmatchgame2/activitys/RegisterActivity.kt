@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
 import com.project.cardmatchgame2.R
 
@@ -22,8 +23,14 @@ class RegisterActivity : AppCompatActivity() {
         binding.btnkytol.setOnClickListener {
             val ad = binding.edtadsoyad.text.toString().trim()
             val user = User(ad)
-            usersref.push().setValue(user)
-        }
+            usersref.push().setValue(user).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Kayıt başarılı!", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Kayıt başarısız!", Toast.LENGTH_LONG).show()
+                }
 
+            }
+        }
     }
 }
