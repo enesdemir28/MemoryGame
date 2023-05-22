@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "572457321683",
-    "project_id": "cardmatchgame2-36ca0",
-    "storage_bucket": "cardmatchgame2-36ca0.appspot.com"
+    "project_number": "130527603768",
+    "project_id": "cardmatchgame-ba703",
+    "storage_bucket": "cardmatchgame-ba703.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:572457321683:android:a1f78c3a70e646733a0026",
+        "mobilesdk_app_id": "1:130527603768:android:bd550bfc0dae5f94ff8acd",
         "android_client_info": {
-          "package_name": "com.project.cardmatchgame2.activitys"
+          "package_name": "com.project.cardmatchgame2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "572457321683-raoiov2c7q0fjrts4nded132rn9imoca.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.project.cardmatchgame2.activitys",
-            "certificate_hash": "243ce32f365d6cf91608f31fcbefd5c4d8859f63"
-          }
-        },
-        {
-          "client_id": "572457321683-j2criv1ee0p8ehu84p03dc6g6l2bgqv6.apps.googleusercontent.com",
+          "client_id": "130527603768-ubn3m5mc7vo4q4603n5dcml18kmi7deu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAhb50tZ-cgtobgAu9Ym6iRLXvXDwOpuQE"
+          "current_key": "AIzaSyBqWjBCviqMIZwD6bGBRU1zdwJJk1XznYs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "572457321683-j2criv1ee0p8ehu84p03dc6g6l2bgqv6.apps.googleusercontent.com",
+              "client_id": "130527603768-ubn3m5mc7vo4q4603n5dcml18kmi7deu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
