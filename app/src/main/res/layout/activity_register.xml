@@ -43,11 +43,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
         android:layout_marginEnd="165dp"
-        android:layout_marginBottom="235dp"
+        android:layout_marginBottom="204dp"
         android:background="@drawable/styles"
         android:text="Kayıt Ol"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 

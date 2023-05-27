@@ -1,23 +1,37 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:background="@drawable/styles"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/orange"
-    android:orientation="horizontal">
+    android:background="@drawable/styles"
+    android:orientation="horizontal"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/userNameTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:text="User"
+        android:layout_weight="1"
         android:textSize="16sp"
         android:textColor="@android:color/black"
-        android:layout_margin="8dp" />
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
+        android:text="Skor : "
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:layout_margin="8dp" />
+        android:textColor="@android:color/black" />
 
 </LinearLayout>
+</androidx.cardview.widget.CardView>

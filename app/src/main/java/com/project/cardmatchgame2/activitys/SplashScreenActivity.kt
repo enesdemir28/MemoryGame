@@ -19,29 +19,33 @@ class SplashScreenActivity : AppCompatActivity() {
         init()
     }
 
+    // View binding için gerekli ayarlamaları yapar
     private fun bindingHazirla() {
-
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
+    // Gerekli başlangıç işlemlerini gerçekleştirir
     private fun init() {
-
         bindingHazirla()
         initCounterDown()
     }
 
-    fun Activity.ekranaGec(sonrakiEkran : Class<*>){
-        startActivity(Intent(this,sonrakiEkran))
+    // Bir sonraki ekrana geçiş işlemini gerçekleştirir
+    fun Activity.ekranaGec(sonrakiEkran : Class<*>) {
+        startActivity(Intent(this, sonrakiEkran))
         finish()
     }
 
+    // Geri sayım başlatma ve sonrasında bir sonraki ekrana geçiş işlemini gerçekleştirir
     fun initCounterDown() {
         object : CountDownTimer(5000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
+                // Her saniye gerçekleştiğinde yapılacak işlemler
             }
-            override fun onFinish() {
 
+            override fun onFinish() {
+                // Geri sayım tamamlandığında yapılacak işlemler
                 ekranaGec(MainActivity::class.java)
                 finish()
             }

@@ -1,3 +1,6 @@
 package com.project.cardmatchgame2.activitys
 
-data class Score(val userId: String, val score: Int)
+// Skorları tutmak ve kaydetmek için gerekli olan class
+data class Score(val ad: String, val score: Int){
+    constructor() : this("",0)
+}

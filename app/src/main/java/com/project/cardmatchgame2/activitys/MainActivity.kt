@@ -17,25 +17,22 @@ class MainActivity : AppCompatActivity() {
         // Binding özelliği için yazılmış kodlar
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // ViewBinding özelliğini kullanarak intent eklentisiyle Whoplays ekranına geçmemizi sağlayan kodlar
+        // ViewBinding özelliğini kullanarak intent eklentisiyle PlayersActivity ekranına geçmemizi sağlayan kodlar
         binding.btntek.setOnClickListener {
 
             var intent = Intent(this, PlayersActivity::class.java)
-
             startActivity(intent)
         }
+        // ViewBinding özelliğini kullanarak intent eklentisiyle RegisterActivity ekranına geçmemizi sağlayan kodlar
         binding.btnregister.setOnClickListener{
 
            var intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
         }
+        // ViewBinding özelliğini kullanarak intent eklentisiyle ScoreBoardActivity ekranına geçmemizi sağlayan kodlar
         binding.btnscrbrd.setOnClickListener {
             var intent = Intent(this,ScoreBoardActivity::class.java)
             startActivity(intent)
         }
-
     }
-
-
-
 }
