@@ -1,4 +1,4 @@
-package com.project.cardmatchgame2.activitys
+package com.project.cardmatchgame2.activitys.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 import com.project.cardmatchgame2.R
+import com.project.cardmatchgame2.activitys.model.User
+import com.project.cardmatchgame2.activitys.activitys.GameScreenActivity
 
 class UserRvAdapter(private var userList: List<User>) : RecyclerView.Adapter<UserRvAdapter.UserViewHolder>() {
 

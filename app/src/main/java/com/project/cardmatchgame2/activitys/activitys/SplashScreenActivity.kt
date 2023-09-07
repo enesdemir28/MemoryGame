@@ -1,12 +1,10 @@
-package com.project.cardmatchgame2.activitys
+package com.project.cardmatchgame2.activitys.activitys
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.View
-import com.project.cardmatchgame2.R
 import com.project.cardmatchgame2.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {

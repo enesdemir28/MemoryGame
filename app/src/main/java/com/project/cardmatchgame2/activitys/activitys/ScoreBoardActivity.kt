@@ -1,15 +1,14 @@
-package com.project.cardmatchgame2.activitys
+package com.project.cardmatchgame2.activitys.activitys
 
-import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.project.cardmatchgame2.R
+import com.project.cardmatchgame2.activitys.model.Score
+import com.project.cardmatchgame2.activitys.adapter.ScoreRvAdapter
 
 class ScoreBoardActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView

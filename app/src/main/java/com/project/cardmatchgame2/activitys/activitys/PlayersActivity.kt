@@ -1,4 +1,4 @@
-package com.project.cardmatchgame2.activitys
+package com.project.cardmatchgame2.activitys.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
 import com.project.cardmatchgame2.R
+import com.project.cardmatchgame2.activitys.model.User
+import com.project.cardmatchgame2.activitys.adapter.UserRvAdapter
 
 class PlayersActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
