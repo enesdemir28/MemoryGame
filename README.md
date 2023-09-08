@@ -30,6 +30,6 @@ In this game, you earn points by matching the face down cards and the points you
 
 ![Players Activity](Players.png)
 
-## Game Screen 1 
+## Game Screen 1, 2 
 
-![Game Screen 1](GameScreen1.png)
+![Game Screen 1](GameScreen1.png),    ![Game Screen 2](GameScreen2.png)
