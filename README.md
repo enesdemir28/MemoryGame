@@ -2,16 +2,16 @@
 
 This is a Card Match Game
 
-Tech Stack
+# Tech Stack
 
 - Android Studio
 - Kotlin
 - Firebase
 
-Description
+# Description
 
 In this game, you earn points by matching the face down cards and the points you earn are written on the score table.
 
-Images
+# Images
 
 
