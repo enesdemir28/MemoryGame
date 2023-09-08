@@ -20,8 +20,6 @@ import com.project.cardmatchgame2.databinding.ActivityGameScreenBinding
 class GameScreenActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityGameScreenBinding
-
-
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<MemoryCard>
     private var score: Int = 0
@@ -148,8 +146,8 @@ class GameScreenActivity : AppCompatActivity() {
                                         "Oyun bitti. Skor: $score",
                                         Toast.LENGTH_SHORT
                                     ).show()
-                                    score = score // Oyundaki skoru güncelle
-                                    scoreTextView.text = "Skor : $score" // Skoru güncelleyi göster
+                                    score = score
+                                    scoreTextView.text = "Skor : $score"
                                 }
                             }
                     }
