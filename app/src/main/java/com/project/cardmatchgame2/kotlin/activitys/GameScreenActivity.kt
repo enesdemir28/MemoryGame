@@ -1,4 +1,4 @@
-package com.project.cardmatchgame2.activitys.activitys
+package com.project.cardmatchgame2.kotlin.activitys
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,8 +12,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.project.cardmatchgame2.R
-import com.project.cardmatchgame2.activitys.model.MemoryCard
-import com.project.cardmatchgame2.activitys.model.Score
+import com.project.cardmatchgame2.kotlin.model.MemoryCard
+import com.project.cardmatchgame2.kotlin.model.Score
 import com.project.cardmatchgame2.databinding.ActivityGameScreenBinding
 
 

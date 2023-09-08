@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    tools:context=".activitys.activitys.GameScreenActivity">
+    tools:context=".kotlin.activitys.GameScreenActivity">
 
     <ImageButton
         android:id="@+id/imageButton5"

@@ -1,11 +1,11 @@
-package com.project.cardmatchgame2.activitys.activitys
+package com.project.cardmatchgame2.kotlin.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.widget.Toast
 import com.google.firebase.database.*
-import com.project.cardmatchgame2.activitys.model.User
+import com.project.cardmatchgame2.kotlin.model.User
 
 import com.project.cardmatchgame2.databinding.ActivityRegisterBinding
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    tools:context=".activitys.activitys.RegisterActivity">
+    tools:context=".kotlin.activitys.RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,8 +29,9 @@
         android:layout_marginEnd="59dp"
         android:background="@drawable/styles"
         android:ems="10"
-        android:hint="Adınızı Giriniz"
+        android:hint=" Adınızı Giriniz"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

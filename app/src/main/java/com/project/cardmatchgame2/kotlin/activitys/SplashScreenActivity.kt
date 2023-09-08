@@ -1,4 +1,4 @@
-package com.project.cardmatchgame2.activitys.activitys
+package com.project.cardmatchgame2.kotlin.activitys
 
 import android.app.Activity
 import android.content.Intent

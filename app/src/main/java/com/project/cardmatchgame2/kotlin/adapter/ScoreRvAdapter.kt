@@ -1,4 +1,4 @@
-package com.project.cardmatchgame2.activitys.adapter
+package com.project.cardmatchgame2.kotlin.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.cardmatchgame2.R
-import com.project.cardmatchgame2.activitys.model.Score
+import com.project.cardmatchgame2.kotlin.model.Score
 
 class ScoreRvAdapter(private var scoreList: List<Score>) : RecyclerView.Adapter<ScoreViewHolder>() {
 

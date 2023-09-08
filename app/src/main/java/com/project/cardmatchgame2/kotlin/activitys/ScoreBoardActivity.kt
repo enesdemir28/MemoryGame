@@ -1,4 +1,4 @@
-package com.project.cardmatchgame2.activitys.activitys
+package com.project.cardmatchgame2.kotlin.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.project.cardmatchgame2.R
-import com.project.cardmatchgame2.activitys.model.Score
-import com.project.cardmatchgame2.activitys.adapter.ScoreRvAdapter
+import com.project.cardmatchgame2.kotlin.model.Score
+import com.project.cardmatchgame2.kotlin.adapter.ScoreRvAdapter
 
 class ScoreBoardActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
