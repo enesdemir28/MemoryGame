@@ -16,6 +16,6 @@ In this game, you earn points by matching the face down cards and the points you
 
 ## Splash Screen
 
-![Splash Screen](IstanbulWeatherAppSplash%201.png)
+![Splash Screen](Splash%201.png)
 
 
