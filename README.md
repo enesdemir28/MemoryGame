@@ -16,6 +16,6 @@ In this game, you earn points by matching the face down cards and the points you
 
 ## Splash Screen
 
-![Splash Screen](Splash%201.PNG)
+![Splash Screen](Splash.PNG)
 
 
