@@ -20,42 +20,42 @@ class PlayersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_players)
-        // RecyclerView'ı ayarla
+
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = UserRvAdapter(userList)
         recyclerView.adapter = adapter
-        // Firebase veritabanı referansını al
+
         usersRef = FirebaseDatabase.getInstance().getReference("Users")
-        // ValueEventListener'ı tanımla
+
         valueEventListener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                // Kullanıcı listesini temizle
+
                 userList.clear()
-                // Veritabanındaki her kullanıcı için döngü
+
                 for (userSnapshot in snapshot.children) {
-                    // Kullanıcıyı al
+
                     val user = userSnapshot.getValue(User::class.java)
                     user?.let {
-                        // Kullanıcı listesine ekle
+
                         userList.add(it)
                     }
                 }
-                // Adaptere kullanıcı listesini ayarla
+
                 adapter.setUserList(userList)
             }
             override fun onCancelled(error: DatabaseError) {
-                // Veri alma işlemi iptal edildiğinde veya başarısız olduğunda yapılacaklar
+
                 Toast.makeText(this@PlayersActivity, "Kullanıcılar alınamadı.", Toast.LENGTH_SHORT).show()
             }
         }
-        // ValueEventListener'ı veritabanına ekle
+
         usersRef.addValueEventListener(valueEventListener)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        // ValueEventListener'ı kaldır
+
         usersRef.removeEventListener(valueEventListener)
     }
 }

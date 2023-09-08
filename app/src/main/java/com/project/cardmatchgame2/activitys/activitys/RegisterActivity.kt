@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Firebase veritabanı referanslarını al
+
         usersRef = FirebaseDatabase.getInstance().getReference("Users")
         countRef = FirebaseDatabase.getInstance().getReference("UserCount")
 
@@ -31,61 +31,57 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Kullanıcı isimlerini kontrol etmek için ValueEventListener kullanarak veritabanından verileri okuyoruz
+
             usersRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     var isNameAvailable = true
 
-                    // Veritabanındaki her kullanıcı için döngü
+
                     for (userSnapshot in snapshot.children) {
-                        // Kullanıcıyı al
+
                         val user = userSnapshot.getValue(User::class.java)
                         if (user != null && user.ad == ad) {
-                            // Girilen isim başka bir kullanıcı tarafından kullanılıyor
                             isNameAvailable = false
                             break
                         }
                     }
 
                     if (!isNameAvailable) {
-                        // Girilen isim başka bir kullanıcı tarafından kullanılıyor
+
                         Toast.makeText(this@RegisterActivity, "Başka bir isim giriniz.", Toast.LENGTH_SHORT).show()
                         return
                     }
 
-                    // Kullanıcı ismi geçerli ve kullanılabilir
-                    // Kullanıcı sayısını almak için ValueEventListener kullanarak veritabanından veriyi okuyoruz
+
+
                     countRef.addListenerForSingleValueEvent(object : ValueEventListener {
                         override fun onDataChange(snapshot: DataSnapshot) {
                             val count = snapshot.getValue(Long::class.java) ?: 0L
                             val userId = count + 1
                             val user = User(ad, userId)
 
-                            // Kullanıcıyı veritabanına ekle
+
                             usersRef.child(userId.toString()).setValue(user).addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
-                                    // Kayıt başarılı
                                     Toast.makeText(this@RegisterActivity, "Kayıt Başarılı ", Toast.LENGTH_LONG).show()
 
-                                    // Skorları kaydetmek için "Scores" düğümüne kullanıcıyı ekle
+
                                     val scoresRef = FirebaseDatabase.getInstance().getReference("Scores")
                                     scoresRef.child(userId.toString()).setValue(user).addOnCompleteListener { scoreTask ->
                                         if (scoreTask.isSuccessful) {
-                                            // Kullanıcı "Scores" düğümüne eklendi
-                                            // Skor kaydedildiğine dair işlemleri burada yapabilirsiniz
+
                                         }
                                     }
                                 } else {
-                                    // Kayıt başarısız
+
                                     val error = task.exception
                                     Toast.makeText(this@RegisterActivity, "Kayıt başarısız : ${error?.message}", Toast.LENGTH_LONG).show()
                                 }
                             }
-                            // Kullanıcı sayısını bir artırarak güncelle
+
                             countRef.setValue(count + 1)
                         }
                         override fun onCancelled(error: DatabaseError) {
-                            // İstek iptal edildiğinde veya başarısız olduğunda yapılacaklar
                             Toast.makeText(this@RegisterActivity, "Kullanıcı sayısı alınamadı.", Toast.LENGTH_SHORT).show()
                         }
                     })
